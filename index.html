@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmoal Corporation - Fashion & Apparel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background-image: url('./images/hero-background.jpg'); /* Local path */
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover .add-to-cart {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .add-to-cart {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">ANMOAL</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="#shoes" class="text-gray-600 hover:text-gray-900">Shoes</a>
+                <a href="#clothing" class="text-gray-600 hover:text-gray-900">Clothing</a>
+                <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-gray-900">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="text-gray-600 hover:text-gray-900">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="md:hidden text-gray-600 hover:text-gray-900" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Home</a>
+            <a href="#shoes" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Shoes</a>
+            <a href="#clothing" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Clothing</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">About</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section h-[60vh] md:h-[90vh] flex items-center justify-center text-white">
+            <div class="text-center bg-black bg-opacity-50 p-8 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Define Your Style</h1>
+                <p class="text-lg md:text-xl mb-8">Discover the latest trends in fashion and footwear.</p>
+                <a href="#products" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-gray-300 transition duration-300">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="products" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-10">Featured Products</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- NOTE: Replace these with your actual image file names inside an 'images' folder -->
+                    <!-- Product 1: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/kito-slides-blue.jpg" alt="Kito 'Step with Style' Slides" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+1';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Kito 'Step with Style' Slides</h3>
+                            <p class="text-gray-600 mb-4">$45.00</p>
+                            <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product 2: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/peshawari-sandal.jpg" alt="Traditional Peshawari Sandal" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+2';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Traditional Peshawari Sandal</h3>
+                            <p class="text-gray-600 mb-4">$60.00</p>
+                             <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product 3: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/cedarwood-slides.jpg" alt="Cedarwood Scorpion Slides" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+3';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Cedarwood Scorpion Slides</h3>
+                            <p class="text-gray-600 mb-4">$40.00</p>
+                             <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product 4: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/kito-flip-flops.jpg" alt="Kito Classic Flip-Flops" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+4';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Kito Classic Flip-Flops</h3>
+                            <p class="text-gray-600 mb-4">$35.00</p>
+                             <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                     <!-- Product 5: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/choco-sandals.jpg" alt="'Choco' Sport Sandals" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+5';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">'Choco' Sport Sandals</h3>
+                            <p class="text-gray-600 mb-4">$55.00</p>
+                            <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product 6: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/cedarwood-striped.jpg" alt="Cedarwood Striped Slides" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+6';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Cedarwood Striped Slides</h3>
+                            <p class="text-gray-600 mb-4">$42.00</p>
+                             <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product 7: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/kito-double-strap.jpg" alt="Kito Double-Strap Slides" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+7';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Kito Double-Strap Slides</h3>
+                            <p class="text-gray-600 mb-4">$48.00</p>
+                             <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product 8: Shoe -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/kito-tan-slides.jpg" alt="Kito 'Style' Slides - Tan" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/400x400/E2E8F0/4A5568?text=Image+8';">
+                        <div class="p-6 relative">
+                            <h3 class="text-lg font-semibold mb-2">Kito 'Style' Slides - Tan</h3>
+                            <p class="text-gray-600 mb-4">$45.00</p>
+                             <button class="add-to-cart absolute bottom-6 right-6 bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Shoes Category -->
+                <div id="shoes" class="relative rounded-lg overflow-hidden h-96">
+                    <img src="images/shoes-category.jpg" alt="Shoes Collection" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/333333/FFFFFF?text=Shoes+Collection';">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white p-4">
+                        <h3 class="text-4xl font-bold mb-4">Shoes</h3>
+                        <a href="#" class="border-2 border-white text-white font-bold py-2 px-6 rounded-full hover:bg-white hover:text-black transition duration-300">View Collection</a>
+                    </div>
+                </div>
+                <!-- Clothing Category -->
+                <div id="clothing" class="relative rounded-lg overflow-hidden h-96">
+                    <img src="images/fabric-category.jpg" alt="Clothing Collection" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/666666/FFFFFF?text=Fabric+Collection';">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white p-4">
+                        <h3 class="text-4xl font-bold mb-4">Clothing</h3>
+                        <a href="#" class="border-2 border-white text-white font-bold py-2 px-6 rounded-full hover:bg-white hover:text-black transition duration-300">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">About Anmoal Corporation</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                    At Anmoal, we believe that fashion is a form of self-expression. Our mission is to provide high-quality, stylish, and comfortable apparel and footwear that empowers you to show the world who you are. From the city streets to the great outdoors, our collections are designed for the modern individual who values both form and function.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section id="contact" class="bg-gray-800 py-16 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Join Our Newsletter</h2>
+                <p class="mb-8">Get exclusive access to new arrivals, special offers, and style tips.</p>
+                <form class="max-w-md mx-auto flex">
+                    <input type="email" placeholder="Enter your email" class="w-full rounded-l-full py-3 px-6 text-gray-800 focus:outline-none">
+                    <button type="submit" class="bg-white text-black font-bold py-3 px-8 rounded-r-full hover:bg-gray-300 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ANMOAL</h3>
+                    <p class="text-gray-400">Defining style for the modern world.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#home" class="hover:text-gray-300">Home</a></li>
+                        <li class="mb-2"><a href="#shoes" class="hover:text-gray-300">Shoes</a></li>
+                        <li class="mb-2"><a href="#clothing" class="hover:text-gray-300">Clothing</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-gray-300">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:text-gray-300">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-gray-300">Shipping & Returns</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-gray-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Anmoal Corporation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
